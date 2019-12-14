@@ -1,0 +1,81 @@
+.loginpage {
+  background-color: #242a3b;
+  display: grid;
+}
+
+.innerlogin {
+  display: grid;
+  grid-template-rows: 200px 60px 60px 60px 60px;
+  align-self: center;
+}
+
+h1 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100px;
+}
+
+.logininput {
+  height: 40px;
+  width: 400px;
+  align-self: center;
+  justify-self: center;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 0px 10px;
+  background-color: black;
+  color: #00ff00;
+  font-family: "Courier New", Courier, monospace;
+  border: white solid 2px;
+}
+
+.loginbuttons {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 50px;
+}
+
+.loginbutton {
+  height: 40px;
+  width: 150px;
+  align-self: center;
+  justify-self: right;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: #242a3b;
+  background-color: white;
+  border: none;
+  margin: 0px 50px;
+  cursor: pointer;
+}
+
+.signup {
+  align-self: center;
+  justify-self: left;
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: #242a3b;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.loginbutton:hover {
+  background-color: #c6c5c9;
+}
+
+.signup:hover {
+  background-color: #c6c5c9;
+}
+
+.loginbutton:active {
+  background-color: black;
+}
+
+.signup:active {
+  background-color: black;
+}

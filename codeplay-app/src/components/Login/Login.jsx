@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
-import { switchSignUp, login, switchGame } from "../../actions";
+import { changeView, login } from "../../actions";
 import axios from "axios";
 
 function Login() {
@@ -47,7 +47,7 @@ function Login() {
           <button
             onClick={() => {
               loginRequest();
-              dispatch(switchGame());
+              dispatch(changeView("GAME_PAGE"));
             }}
             type="button"
             className="loginbutton"
@@ -57,7 +57,7 @@ function Login() {
           <button
             className="signup"
             onClick={() => {
-              dispatch(switchSignUp());
+              dispatch(changeView("SIGNUP_PAGE"));
             }}
           >
             Sign up?

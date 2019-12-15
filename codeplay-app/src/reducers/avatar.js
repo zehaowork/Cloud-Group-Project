@@ -1,3 +1,16 @@
 const avatarReducer = (state = "GOBLIN", action) => {
-  return actiton.type;
+  switch (action.type) {
+    case "GOBLIN":
+      return "GOBLIN";
+    case "WARRIOR":
+      return "WARRIOR";
+    case "KNIGHT":
+      return "KNIGHT";
+    case "DRAGON":
+      return "DRAGON";
+
+    default:
+      return state;
+  }
 };
+export default avatarReducer;

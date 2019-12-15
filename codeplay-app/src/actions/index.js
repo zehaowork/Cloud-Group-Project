@@ -4,32 +4,16 @@ export const login = () => {
   };
 };
 
-export const switchSignUp = () => {
+export const changeAvatar = avatar => {
   return {
-    type: "SIGNUP_PAGE"
+    type: changeAvatar,
+    payload: avatar
   };
 };
 
-export const switchLogin = () => {
+export const changeView = page => {
   return {
-    type: "LOGIN_PAGE"
-  };
-};
-
-export const switchUserInfo = () => {
-  return {
-    type: "USER_INFO_PAGE"
-  };
-};
-
-export const switchReset = () => {
-  return {
-    type: "RESET_PAGE"
-  };
-};
-
-export const switchGame = () => {
-  return {
-    type: "GAME_PAGE"
+    type: "CHANGE_VIEW",
+    payload: page
   };
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Login/Login.css";
 import { useDispatch } from "react-redux";
-import { switchLogin } from "../../actions/";
+import { changeView } from "../../actions/";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -62,7 +62,7 @@ function SignUp() {
           </button>
           <button
             onClick={() => {
-              dispatch(switchLogin());
+              dispatch(changeView("LGOIN_PAGE"));
             }}
             className="signup back"
           >

@@ -27,3 +27,9 @@ export const switchReset = () => {
     type: "RESET_PAGE"
   };
 };
+
+export const switchGame = () => {
+  return {
+    type: "GAME_PAGE"
+  };
+};

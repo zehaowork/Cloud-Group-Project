@@ -1,19 +1,17 @@
 import React from "react";
-
 import { useDispatch } from "react-redux";
-import { switchReset } from "../../actions/index";
+import { switchUserInfo } from "../../actions";
 
-function UserInfo() {
+function Game() {
   const dispatch = useDispatch();
   return (
     <button
       onClick={() => {
-        dispatch(switchReset());
+        dispatch(switchUserInfo());
       }}
     >
-      Reset Pass
+      UserINFO
     </button>
   );
 }
-
-export default UserInfo;
+export default Game;

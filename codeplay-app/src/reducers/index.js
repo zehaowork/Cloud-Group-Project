@@ -1,13 +1,9 @@
-import loggedReducer from "./isLogged";
-import signupVisibleReducer from "./singupVisible";
-import resetVisbleReducer from "./resetVisible";
+import viewControllerReducer from "./viewController";
 
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-  isLogged: loggedReducer,
-  signupVisible: signupVisibleReducer,
-  resetVisble: resetVisbleReducer
+  viewController: viewControllerReducer
 });
 
 export default allReducers;

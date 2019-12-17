@@ -1,0 +1,119 @@
+.userinfopage {
+  background-color: #242a3b;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.avatarholder {
+  background-color: #242a3b;
+  display: grid;
+}
+
+.avatarimage {
+    height: 500px; 
+    width: 380px;
+    align-self: center;
+    justify-self: center;
+}
+
+.changeavatar {
+    width: 200px;
+    height: 50px;
+    align-self: start;
+    justify-self: center;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2e4585;
+    border: 2px solid #1696c4;
+    color: white;
+    cursor: pointer;
+}
+
+.changeavatar:hover {
+    background-color: #2a3963;
+}
+
+.changeavatar:active {
+    background-color: black;
+}
+
+.userinfo {
+    display: grid;
+    grid-template-rows: 120px 120px 120px 120px 90px;
+}
+
+.usernameinfoholder {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.label {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+    justify-self: left;
+}
+
+.info {
+    color: #1696c4;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 29px;
+}
+
+.passwordinfoholder {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%
+}
+
+.passwordlabel {
+    grid-column: 1 / span 2;
+}
+
+.changepassword {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid #1696c4;
+    background-color: #2e4585;
+    color: white;
+}
+
+.changepassword:hover {
+    background-color: #2a3963;
+}
+
+.changepassword:active {
+    background-color: black;
+}
+
+.infobuttons {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.infobutton {
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid #1696c4;
+    background-color: #2e4585;
+    color: white;
+    justify-self: right;
+    margin-right: 50px;
+}
+
+.infobutton:hover {
+    background-color: #2a3963;
+}
+
+.infobutton:active {
+    background-color: black;
+}

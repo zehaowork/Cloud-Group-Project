@@ -16,7 +16,7 @@ function App() {
       {viewController === "RESET_PAGE" && <ResetPassword />}
       {viewController === "USER_INFO_PAGE" && <UserInfo />}
   {viewController === "GAME_PAGE" && <Game />} */}
-      <Game />
+      <UserInfo />
     </div>
   );
 }

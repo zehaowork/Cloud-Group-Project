@@ -26,10 +26,10 @@ function UserInfo() {
   return (
     <div className = "userinfopage">
       <div className = "avatarholder">
-        <img src="troll.png" className="avatarimage"></img>
+        <img src="witch.png" className="avatarimage"></img>
         <button className="changeavatar">Change Avatar</button>
       </div>
-      <div className="userinfo">
+      <div className="userinfoholder">
         <div className="usernameinfoholder">
           <h2 className="label">Username</h2>
           <h2 className="info" align="left">Sanjee</h2>

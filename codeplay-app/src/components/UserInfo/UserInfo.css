@@ -38,7 +38,7 @@
     background-color: black;
 }
 
-.userinfo {
+.userinfoholder {
     display: grid;
     grid-template-rows: 120px 120px 120px 120px 90px;
 }

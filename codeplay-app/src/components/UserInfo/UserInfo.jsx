@@ -24,31 +24,53 @@ function UserInfo() {
   };
 
   return (
-    <div className = "userinfopage">
-      <div className = "avatarholder">
+    <div className="userinfopage">
+      <div className="avatarholder">
         <img src="witch.png" className="avatarimage"></img>
         <button className="changeavatar">Change Avatar</button>
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
           <h2 className="label">Username</h2>
-          <h2 className="info" align="left">Sanjee</h2>
+          <h2 className="info" align="left">
+            Sanjee
+          </h2>
         </div>
-        <div className = "passwordinfoholder">
+        <div className="passwordinfoholder">
           <h2 className="label passwordlabel">Password</h2>
-          <h2 className="info" align="left">***************</h2>
-          <button className="changepassword">Change Password</button>
+          <h2 className="info" align="left">
+            ***************
+          </h2>
+          <button
+            onClick={() => {
+              dispatch(changeView("RESET_PAGE"));
+            }}
+            className="changepassword"
+          >
+            Change Password
+          </button>
         </div>
         <div className="usernameinfoholder">
           <h2 className="label">Joined</h2>
-          <h2 className="info" align="left">05/01/2020</h2>
+          <h2 className="info" align="left">
+            05/01/2020
+          </h2>
         </div>
         <div className="usernameinfoholder">
           <h2 className="label">Progress</h2>
-          <h2 className="info" align="left">12%</h2>
+          <h2 className="info" align="left">
+            12%
+          </h2>
         </div>
         <div className="infobuttons">
-          <button className="infobutton">Back</button>
+          <button
+            onClick={() => {
+              dispatch(changeView("GAME_PAGE"));
+            }}
+            className="infobutton"
+          >
+            Back
+          </button>
           <button className="infobutton">Save</button>
         </div>
       </div>
@@ -57,56 +79,3 @@ function UserInfo() {
 }
 
 export default UserInfo;
-
-{ /* <button
-        onClick={() => {
-          dispatch(changeView("RESET_PAGE"));
-        }}
-      >
-        Reset Pass
-      </button>
-      <div className="btn-group">
-        <button
-          onClick={() => {
-            setAvatar("GOBLIN");
-          }}
-          className="avatarBtn"
-        >
-          Goblin
-        </button>
-        <button
-          onClick={() => {
-            setAvatar("KNIGHT");
-          }}
-          className="avatarBtn"
-        >
-          Knight
-        </button>
-        <button
-          onClick={() => {
-            setAvatar("WARRIOR");
-          }}
-          className="avatarBtn"
-        >
-          Warrior
-        </button>
-        <button
-          onClick={() => {
-            setAvatar("DRAGON");
-          }}
-          className="avatarBtn"
-        >
-          Dragon
-        </button>
-
-        <button>{avatar}</button>
-      </div>
-      <button>Save</button>
-      <button
-        onClick={() => {
-          dispatch(changeView("GAME_PAGE"));
-        }}
-      >
-        Back
-      </button>
-      </div>  */ }

@@ -6,7 +6,7 @@ export const login = () => {
 
 export const changeAvatar = avatar => {
   return {
-    type: changeAvatar,
+    type: "CHANGE_AVATAR",
     payload: avatar
   };
 };

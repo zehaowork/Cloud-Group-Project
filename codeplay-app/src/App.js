@@ -11,12 +11,11 @@ function App() {
   const viewController = useSelector(state => state.viewController);
   return (
     <div className="App">
-      {/* {viewController === "LOGIN_PAGE" && <Login />}
+      {viewController === "LOGIN_PAGE" && <Login />}
       {viewController === "SIGNUP_PAGE" && <SignUp />}
       {viewController === "RESET_PAGE" && <ResetPassword />}
       {viewController === "USER_INFO_PAGE" && <UserInfo />}
-  {viewController === "GAME_PAGE" && <Game />} */}
-      <UserInfo />
+      {viewController === "GAME_PAGE" && <Game />}
     </div>
   );
 }

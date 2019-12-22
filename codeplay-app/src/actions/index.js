@@ -17,3 +17,10 @@ export const changeView = page => {
     payload: page
   };
 };
+
+export const loadProfile = profile => {
+  return {
+    type: "LOAD_PROFILE",
+    payload: profile
+  };
+};

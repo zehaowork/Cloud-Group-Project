@@ -7,7 +7,13 @@ import axios from "axios";
 
 function UserInfo() {
   const dispatch = useDispatch();
-  const [avatar, setAvatar] = useState(useSelector(state => state.avatar));
+  const [profile, setProfile] = useState({
+    username: "Zehao",
+    password: "123123",
+    date: "23/09/2019",
+    progress: "20",
+    avatar: "goblin.png"
+  });
 
   /**
    *  Simple HTML structures  - Apply CSS after.
@@ -26,20 +32,20 @@ function UserInfo() {
   return (
     <div className="userinfopage">
       <div className="avatarholder">
-        <img src="witch.png" className="avatarimage"></img>
+        <img src={profile.avatar} className="avatarimage"></img>
         <button className="changeavatar">Change Avatar</button>
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
           <h2 className="label">Username</h2>
           <h2 className="info" align="left">
-            Sanjee
+            {profile.username}
           </h2>
         </div>
         <div className="passwordinfoholder">
           <h2 className="label passwordlabel">Password</h2>
-          <h2 className="info" align="left">
-            ***************
+          <h2 type="password" className="info" align="left">
+            ********
           </h2>
           <button
             onClick={() => {
@@ -53,13 +59,13 @@ function UserInfo() {
         <div className="usernameinfoholder">
           <h2 className="label">Joined</h2>
           <h2 className="info" align="left">
-            05/01/2020
+            {profile.date}
           </h2>
         </div>
         <div className="usernameinfoholder">
           <h2 className="label">Progress</h2>
           <h2 className="info" align="left">
-            12%
+            {profile.progress + "%"}
           </h2>
         </div>
         <div className="infobuttons">

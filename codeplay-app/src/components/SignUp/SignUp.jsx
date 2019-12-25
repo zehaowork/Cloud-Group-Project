@@ -11,6 +11,7 @@ function SignUp() {
 
   const signupRequest = () => {
     alert("Your name is " + user + ", Your password is " + pass + ".");
+
     // axios
     //   .get("OUR_SEVER")
     //   .then(res => {
@@ -62,7 +63,7 @@ function SignUp() {
           </button>
           <button
             onClick={() => {
-              dispatch(changeView("LGOIN_PAGE"));
+              dispatch(changeView("LOGIN_PAGE"));
             }}
             className="signup back"
           >

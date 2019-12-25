@@ -1,154 +1,164 @@
 .gamepage {
-    background-color: #242a3b;
-    display: grid;
-    grid-template-rows: 40px 230px 330px;
-    grid-template-columns: 20% 45% 35%;
-    column-gap: 5px;
+  background-color: #242a3b;
+  display: grid;
+  grid-template-rows: 40px 230px 330px;
+  grid-template-columns: 20% 45% 35%;
+  column-gap: 5px;
 }
 
 .logo {
-    align-self: center;
+  align-self: center;
 }
 
-.logo h3{
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+.logo h3 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
 }
 
 .userinfotag {
-    align-self: center;
-    justify-self: right;
-    margin-right: 15px;
+  align-self: center;
+  justify-self: right;
+  margin-right: 15px;
 }
 
 .userinfo {
-    font-size: 16px;
-    width: 130px;
-    height: 30px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #242a3b;
-    color: #1696c4;
-    border: 1px solid #1696c4;
+  font-size: 16px;
+  width: 130px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #242a3b;
+  color: #1696c4;
+  border: 1px solid #1696c4;
 }
 
 .chapters {
-    grid-row: 1 / span all;
-    overflow: scroll;
-    height: 600px;
-    padding-top: 5px;
-    padding-left: 5px;
+  grid-row: 1 / span all;
+  overflow: scroll;
+  height: 600px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .story {
-    overflow: scroll;
-    padding: 15px;
-    border: 1px solid #1696c4;
-    border-radius: 10px;
+  overflow: scroll;
+  padding: 15px;
+  border: 1px solid #1696c4;
+  border-radius: 10px;
 }
 
 .storytext {
-    color: white;
-    font-family: cursive;
-    font-size: 20px;
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
 }
 
 .instructionssolution {
-    
-    display: grid;
-    grid-template-rows: 80% 20%;
-    border: 1px solid white;
-    border-radius: 10px;
-    width: 433px;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 433px;
 }
 
 .instructions {
-    overflow: scroll;
-    color: #1696c4;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+  overflow: scroll;
+  color: #1696c4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 
 .solutiontag {
-    font-size: 25px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    border: none;
-    border-radius: 8px;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  border-radius: 8px;
 }
 
 .solutiontag:hover {
-    background-color: #d7dade;
+  background-color: #d7dade;
 }
 
 .solutiontag:active {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .code {
-    display: grid;
-    grid-template-rows: 90% 10%;
-    padding: 10px;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  padding: 10px;
 }
 
 .codebuttons {
-    display: grid;
-    grid-template-columns: 30% 70%;
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
 .codebutton {
-    font-size: 16px;
-    width: 100px;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 15px;
-    cursor: pointer;
-    align-self: center;
+  font-size: 16px;
+  width: 100px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 15px;
+  cursor: pointer;
+  align-self: center;
 }
 
 .codebutton:hover {
-    background-color: #d7dade;
+  background-color: #d7dade;
 }
 
 .codebutton:active {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .output {
-    background-color: black;
-    margin-right: 20px;
-    margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    color: green;
-    text-align: left;
-    padding: 5px;
-    overflow: scroll;
+  background-color: black;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: green;
+  text-align: left;
+  padding: 5px;
+  overflow: scroll;
 }
 
 .chapterholder {
-    border: 2px solid #1696c4;
-    background-color: #1696c4;
-    color: #242a3b;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    height: 40px;
-    text-align: left;
-    padding-left: 5px;
-    display: grid;
-    justify-content: left;
-    align-content: center;
-    margin-bottom: 5px;
-    border-radius: 7px;
-
+  border: 2px solid #1696c4;
+  background-color: #1696c4;
+  color: #242a3b;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  height: 40px;
+  text-align: left;
+  padding-left: 5px;
+  display: grid;
+  justify-content: left;
+  align-content: center;
+  margin-bottom: 5px;
+  border-radius: 7px;
 }
 
 .current {
-    background-color: #242a3b;
-    color: #1696c4;
-    border: none;
+  background-color: #242a3b;
+  color: #1696c4;
+  border: none;
+}
+
+.btn-log-off {
+  font-size: 16px;
+  width: 130px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  background-color: red;
+  color: white;
+  border: 1px solid white;
 }

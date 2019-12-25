@@ -15,6 +15,12 @@ function Game() {
     setCode(newValue);
   }
 
+  const logoff = () => {
+    localStorage.setItem("user", "");
+    localStorage.setItem("loginStatus", "OFF");
+    dispatch(changeView("LOGIN_PAGE"));
+  };
+
   return (
     <div className="gamepage">
       <div className="chapters">
@@ -72,6 +78,14 @@ function Game() {
           className="userinfo"
         >
           User info
+        </button>
+        <button
+          onClick={() => {
+            logoff();
+          }}
+          className="btn-log-off"
+        >
+          LOG OFF
         </button>
       </div>
       <div className="story">

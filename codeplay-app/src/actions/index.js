@@ -24,3 +24,17 @@ export const loadProfile = profile => {
     payload: profile
   };
 };
+
+export const loadLoginStatus = status => {
+  return {
+    type: "LOAD_STATUS",
+    payload: status
+  };
+};
+
+export const loadUser = user => {
+  return {
+    type: "LOAD_USER",
+    payload: user
+  };
+};

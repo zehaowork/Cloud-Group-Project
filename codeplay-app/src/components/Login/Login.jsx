@@ -14,6 +14,9 @@ function Login() {
    */
   const loginRequest = () => {
     alert("Your name is " + user + ", Your password is " + pass + ".");
+
+    localStorage.setItem("loginStatus", "ON");
+    localStorage.setItem("user", "xhao98");
     // axios
     //   .get("OUR_SEVER")
     //   .then(res => {

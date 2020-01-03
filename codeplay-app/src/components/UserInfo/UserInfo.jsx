@@ -33,7 +33,18 @@ function UserInfo() {
     <div className="userinfopage">
       <div className="avatarholder">
         <img src={profile.avatar} className="avatarimage"></img>
-        <button className="changeavatar">Change Avatar</button>
+        <div className="avatars">
+          <button className="avatarpic"><img className="avicon" src="goblin1.png"></img></button>
+          <button className="avatarpic"><img className="avicon"src="fairy1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="wizard1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="witch1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="ogre1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="troll1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="assassin1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="archer1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="elf1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="knight1.png"></img></button>
+        </div>
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
@@ -83,5 +94,7 @@ function UserInfo() {
     </div>
   );
 }
+
+
 
 export default UserInfo;

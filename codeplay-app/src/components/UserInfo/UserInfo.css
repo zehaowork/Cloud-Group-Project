@@ -117,3 +117,31 @@
 .infobutton:active {
     background-color: black;
 }
+
+.avatars {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.avatarpic {
+    height: 100px;
+    width: 100px;
+    background-color: #242a3b;
+    border: 1px solid #1696c4;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.avatarpic:hover {
+    background-color: #1696c4;
+}
+
+.avatarpic:active {
+    background-color: black;
+}
+
+.avicon {
+    height: 90px;
+    width: 90px;
+}

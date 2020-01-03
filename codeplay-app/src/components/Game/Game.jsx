@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changeView } from "../../actions";
 import AceEditor from "react-ace";
@@ -6,17 +6,35 @@ import "ace-builds/src-noconflict/mode-typescript";
 import "ace-builds/src-noconflict/theme-monokai";
 import "./Game.css";
 import axios from "axios";
+
 import { useHistory } from "react-router-dom";
+
 
 function Game() {
   const dispatch = useDispatch();
   const history = useHistory()
 
   const [code, setCode] = useState("");
+  const [unit, setUnit] = useState(2);
+  const [story, setStory] = useState(" ");
+  const [solution, setSolution] = useState("");
 
   function onChange(newValue) {
     setCode(newValue);
   }
+
+  useEffect(() => {
+    axios
+      .get("/load/game")
+      .then(res => {
+        setStory(res.data.story);
+        setSolution(res.data.solution);
+        setUnit(res.data.unit);
+      })
+      .catch(res => {
+        alert("loading failure");
+      });
+  });
 
   const logoff = () => {
     localStorage.setItem("user", "");
@@ -28,46 +46,54 @@ function Game() {
   return (
     <div className="gamepage">
       <div className="chapters">
-        <div className="chapterholder">
+        <div className={unit === 0 ? "chapterholder current" : "chapterholder"}>
           <p>First program</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 1 ? "chapterholder current" : "chapterholder"}>
           <p>Type annotation</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 2 ? "chapterholder current" : "chapterholder"}>
           <p>Variables</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 3 ? "chapterholder current" : "chapterholder"}>
           <p>Numbers</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 4 ? "chapterholder current" : "chapterholder"}>
           <p>Strings</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 5 ? "chapterholder current" : "chapterholder"}>
           <p>Boolean</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 6 ? "chapterholder current" : "chapterholder"}>
           <p>Array</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 7 ? "chapterholder current" : "chapterholder"}>
           <p>Tuple</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 8 ? "chapterholder current" : "chapterholder"}>
           <p>Enum</p>
         </div>
-        <div className="chapterholder">
+        <div className={unit === 9 ? "chapterholder current" : "chapterholder"}>
           <p>Union</p>
         </div>
-        <div className="chapterholder current">
+        <div
+          className={unit === 10 ? "chapterholder current" : "chapterholder"}
+        >
           <p>Any</p>
         </div>
-        <div className="chapterholder">
+        <div
+          className={unit === 11 ? "chapterholder current" : "chapterholder"}
+        >
           <p>Void</p>
         </div>
-        <div className="chapterholder">
+        <div
+          className={unit === 12 ? "chapterholder current" : "chapterholder"}
+        >
           <p>Never</p>
         </div>
-        <div className="chapterholder">
+        <div
+          className={unit === 13 ? "chapterholder current" : "chapterholder"}
+        >
           <p>Type inference</p>
         </div>
       </div>
@@ -143,7 +169,14 @@ function Game() {
           editorProps={{ $blockScrolling: true }}
         />
         <div className="codebuttons">
-          <button className="codebutton">Run</button>
+          <button
+            onClick={() => {
+              setUnit((unit + 1) % 14);
+            }}
+            className="codebutton"
+          >
+            Run
+          </button>
           <button
             onClick={() => {
               setCode("");

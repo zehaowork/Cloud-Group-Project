@@ -29,11 +29,13 @@ function App() {
 
   //ADD OTHER ROUTES HERE
   return (
+
     <React.Fragment>
       <Route path="/login" render={(routerProps) => <Login routerProps={routerProps} />}></Route>
       <Route path="/game" render={(routerProps) => <Game routerProps={routerProps} />}></Route>
       <Route path="/user" render={(routerProps) => <UserInfo routerProps={routerProps} />}></Route>
     </React.Fragment>
+
   );
 }
 

@@ -79,3 +79,8 @@ h1 {
 .signup:active {
   background-color: black;
 }
+
+.status {
+  font-family: "Courier New", Courier, monospace;
+  color: #ffcc00;
+}

@@ -1,0 +1,74 @@
+/**
+ * url: /login
+ * params:
+ *         user:xhao98
+ *         pass: pass123
+ * return: bool e.g. true/false
+ */
+
+/**
+ * url: /signup
+ * params:
+ *         user:xhao98
+ *         pass: pass123
+ * return bool e.g. true/false
+ *
+ */
+
+/**
+ * url: /signup
+ * params:
+ *         user: xhao98
+ *         pass: pass123
+ * return bool e.g. true/false
+ *
+ */
+
+/**
+ * url: /game/load
+ * params:
+ *         user: xhao98
+ * return:
+ *         unit:
+ *         story:
+ *         solution:
+ * return bool e.g. true/false
+ *
+ */
+
+/**
+ * url: /game/execute
+ * params:
+ *         user: xhao98
+ *         code: // in string form
+ * return:
+ *         result:""
+ * return bool e.g. true/false
+ *
+ */
+
+/**
+ * url: /user
+ * params:
+ *         user: xhao98
+ *
+ * return:
+ *         username:
+ *         date: // date joined
+ *         progress:
+ *         avatar:
+ * return bool e.g. true/false
+ *
+ */
+
+/**
+ * url: /change
+ * params:
+ *         user: xhao98
+ *         oldpass:
+ *         newpass:
+ * return:
+ *         response: true/false
+ * return bool e.g. true/false
+ *
+ */

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { changeView, changeAvatar } from "../../actions/index";
@@ -8,59 +8,130 @@ import { useHistory } from "react-router-dom";
 
 function UserInfo() {
   const dispatch = useDispatch();
+
   const history = useHistory()
-    const [profile, setProfile] = useState({
+   
+  const username = "xhao98";
+  const password = "123123";
+  const date = "2013/01/01";
+  const [avatar, setAvatar] = useState("witch");
+  const progress = 22;
 
-  username : "xhao98",
-  password : "123123",
-  date : "2013/01/01",
-  avatar: useState("witch"),
-  progress : 22
-})
-
-const avatar = useState("witch");
 
   //TODO: ADD URL AND ACTION TO RESPOSNE
   const saveRequest = () => {
-    // axios
-    //   .get()
-    //   .then()
-    //   .catch();
+    axios
+      .post("/save")
+      .then(res => {})
+      .catch(res => {
+        alert("Loading Failure");
+      });
 
     dispatch(changeAvatar("GOBLIN"));
   };
 
+  const playSound = () => {
+    var sound = document.getElementById("audio");
+    sound.play();
+  };
+
   return (
     <div className="userinfopage">
+      <audio autoPlay id="audio" src={avatar + ".wav"}></audio>
       <div className="avatarholder">
+
+        <img src={avatar + ".png"} className="avatarimage"></img>
         <div className="avatars">
-          <button className="avatarpic"><img className="avicon" src="goblin1.png"></img></button>
-          <button className="avatarpic"><img className="avicon"src="fairy1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="wizard1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="witch1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="ogre1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="troll1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="assassin1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="archer1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="elf1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="knight1.png"></img></button>
+          <button
+            onClick={() => {
+              playSound();
+              setAvatar("goblin");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="goblin1.png"></img>
+          </button>
+          <audio src=""></audio>
+          <button
+            onClick={() => {
+              setAvatar("fairy");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="fairy1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("wizard");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="wizard1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("witch");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="witch1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("ogre");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="ogre1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("troll");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="troll1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("assassin");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="assassin1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("archer");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="archer1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("elf");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="elf1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("knight");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="knight1.png"></img>
+          </button>
         </div>
 
-        <img src={profile.avatar + ".png"} className="avatarimage"></img>
-        <button
-          onClick={() => {
-            changeAvatar("troll");
-          }}
-          className="changeavatar"
-        >
-          Change Avatar
-        </button>
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
           <h2 className="label">Username</h2>
           <h2 className="info" align="left">
-            {profile.username}
+            {username}
           </h2>
         </div>
         <div className="passwordinfoholder">
@@ -80,13 +151,13 @@ const avatar = useState("witch");
         <div className="usernameinfoholder">
           <h2 className="label">Joined</h2>
           <h2 className="info" align="left">
-            {profile.date}
+            {date}
           </h2>
         </div>
         <div className="usernameinfoholder">
           <h2 className="label">Progress</h2>
           <h2 className="info" align="left">
-            {profile.progress + "%"}
+            {progress + "%"}
           </h2>
         </div>
         <div className="infobuttons">

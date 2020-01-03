@@ -13,6 +13,7 @@ function Login() {
   const [pass, setPass] = useState("");
   const [user, setUser] = useState("");
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("Login Failed");
   /**
    * TODO: Add actual URL for login
    */
@@ -26,14 +27,19 @@ function Login() {
 
       localStorage.setItem("loginStatus", "ON");
       localStorage.setItem("user", "xhao98");
-    // }, 2000);
 
-    // axios
-    //   .get("OUR_SEVER")
-    //   .then(res => {
-    //     alert(res);
-    //   })
-    //   .catch("");
+
+    }, 2000);
+
+
+    axios
+      .get("/login")
+      .then(res => {
+        alert("Login Successful");
+      })
+      .catch(res => {
+        alert("Login Failed");
+      });
   };
   return (
     <div className="loginpage">
@@ -81,6 +87,7 @@ function Login() {
               Sign up?
             </button>
           </div>
+          <h2 className="status">{status}</h2>
         </div>
       )}
     </div>

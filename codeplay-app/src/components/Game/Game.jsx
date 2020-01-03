@@ -9,15 +9,15 @@ import axios from "axios";
 
 import { useHistory } from "react-router-dom";
 
-
 function Game() {
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
 
   const [code, setCode] = useState("");
   const [unit, setUnit] = useState(2);
   const [story, setStory] = useState(" ");
   const [solution, setSolution] = useState("");
+  const [counter, setCounter] = useState("00:00:00");
 
   function onChange(newValue) {
     setCode(newValue);
@@ -39,7 +39,7 @@ function Game() {
   const logoff = () => {
     localStorage.setItem("user", "");
     localStorage.setItem("loginStatus", "OFF");
-    history.push('/login')
+    history.push("/login");
     // dispatch(changeView("LOGIN_PAGE"));
   };
 
@@ -105,7 +105,7 @@ function Game() {
 
         <button
           onClick={() => {
-              history.push('/user')
+            history.push("/user");
             // dispatch(changeView("USER_INFO_PAGE"));
           }}
           className="userinfo"
@@ -171,6 +171,7 @@ function Game() {
           editorProps={{ $blockScrolling: true }}
         />
         <div className="codebuttons">
+          <p>{counter}</p>
           <button
             onClick={() => {
               setUnit((unit + 1) % 14);

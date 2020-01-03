@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 
 function Login() {
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
 
   const [pass, setPass] = useState("");
   const [user, setUser] = useState("");
@@ -19,18 +19,13 @@ function Login() {
    */
   const loginRequest = () => {
     setLoading(true);
-    // setTimeout(() => {
+    setTimeout(() => {
       setLoading(false);
-      history.push('/game')
-      // dispatch(changeView("GAME_PAGE"));
-      // alert("Your name is " + user + ", Your password is " + pass + ".");
+      history.push("/game");
 
       localStorage.setItem("loginStatus", "ON");
       localStorage.setItem("user", "xhao98");
-
-
     }, 2000);
-
 
     axios
       .get("/login")

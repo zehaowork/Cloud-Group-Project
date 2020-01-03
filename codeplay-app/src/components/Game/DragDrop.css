@@ -1,0 +1,38 @@
+.dragdrop {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    background-color: #070f21;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    column-gap: 5px;
+    justify-content: center;
+}
+
+.option p{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.passage {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    justify-self: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 10px;
+}
+
+.gap {
+    border: 1px solid white;
+    width: 100px;
+    height: 15px;
+    padding: 5px;
+}
+

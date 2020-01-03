@@ -6,6 +6,7 @@ import "ace-builds/src-noconflict/mode-typescript";
 import "ace-builds/src-noconflict/theme-monokai";
 import "./Game.css";
 import axios from "axios";
+import DragDrop from "./DragDrop";
 
 import { useHistory } from "react-router-dom";
 
@@ -33,7 +34,7 @@ function Game() {
       })
       .catch(res => {
         alert("loading failure");
-      });
+      },[]);
   });
 
   const logoff = () => {
@@ -170,6 +171,7 @@ function Game() {
           name="UNIQUE_ID_OF_DIV"
           editorProps={{ $blockScrolling: true }}
         />
+        {/*<DragDrop /> */}
         <div className="codebuttons">
           <button
             onClick={() => {

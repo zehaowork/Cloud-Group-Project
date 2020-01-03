@@ -24,36 +24,92 @@ function UserInfo() {
     dispatch(changeAvatar("GOBLIN"));
   };
 
-  const changeAvatar = newAvatar => {
-    setAvatar(newAvatar);
-  };
-
   return (
     <div className="userinfopage">
       <div className="avatarholder">
-        <img src={profile.avatar} className="avatarimage"></img>
-        <div className="avatars">
-          <button className="avatarpic"><img className="avicon" src="goblin1.png"></img></button>
-          <button className="avatarpic"><img className="avicon"src="fairy1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="wizard1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="witch1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="ogre1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="troll1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="assassin1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="archer1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="elf1.png"></img></button>
-          <button className="avatarpic"><img className="avicon" src="knight1.png"></img></button>
-        </div>
-
         <img src={avatar + ".png"} className="avatarimage"></img>
-        <button
-          onClick={() => {
-            changeAvatar("troll");
-          }}
-          className="changeavatar"
-        >
-          Change Avatar
-        </button>
+        <div className="avatars">
+          <button
+            onClick={() => {
+              setAvatar("goblin");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="goblin1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("fairy");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="fairy1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("wizard");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="wizard1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("witch");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="witch1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("ogre");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="ogre1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("troll");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="troll1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("assassin");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="assassin1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("archer");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="archer1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("elf");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="elf1.png"></img>
+          </button>
+          <button
+            onClick={() => {
+              setAvatar("knight");
+            }}
+            className="avatarpic"
+          >
+            <img className="avicon" src="knight1.png"></img>
+          </button>
+        </div>
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
@@ -103,7 +159,5 @@ function UserInfo() {
     </div>
   );
 }
-
-
 
 export default UserInfo;

@@ -30,6 +30,7 @@ function App() {
       {viewController === "RESET_PAGE" && <ResetPassword />}
       {viewController === "USER_INFO_PAGE" && <UserInfo />}
       {viewController === "GAME_PAGE" && <Game />}
+      <audio id="background" autoPlay loop src="background.wav"></audio>
     </div>
   );
 }

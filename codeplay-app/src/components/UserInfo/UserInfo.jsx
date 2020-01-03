@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { changeView, changeAvatar } from "../../actions/index";
@@ -12,6 +12,7 @@ function UserInfo() {
   const date = "2013/01/01";
   const [avatar, setAvatar] = useState("witch");
   const progress = 22;
+
   //TODO: ADD URL AND ACTION TO RESPOSNE
   const saveRequest = () => {
     axios
@@ -24,19 +25,27 @@ function UserInfo() {
     dispatch(changeAvatar("GOBLIN"));
   };
 
+  const playSound = () => {
+    var sound = document.getElementById("audio");
+    sound.play();
+  };
+
   return (
     <div className="userinfopage">
+      <audio autoPlay id="audio" src={avatar + ".wav"}></audio>
       <div className="avatarholder">
         <img src={avatar + ".png"} className="avatarimage"></img>
         <div className="avatars">
           <button
             onClick={() => {
+              playSound();
               setAvatar("goblin");
             }}
             className="avatarpic"
           >
             <img className="avicon" src="goblin1.png"></img>
           </button>
+          <audio src=""></audio>
           <button
             onClick={() => {
               setAvatar("fairy");

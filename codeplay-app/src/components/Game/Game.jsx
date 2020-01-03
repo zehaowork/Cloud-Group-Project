@@ -96,6 +96,8 @@ function Game() {
         <h3>Code & Play</h3>
       </div>
       <div className="userinfotag">
+        <input type="image" src="speaker.png" class="btn-sound" />
+
         <button
           onClick={() => {
             dispatch(changeView("USER_INFO_PAGE"));

@@ -31,6 +31,20 @@ function UserInfo() {
   return (
     <div className="userinfopage">
       <div className="avatarholder">
+        <img src={profile.avatar} className="avatarimage"></img>
+        <div className="avatars">
+          <button className="avatarpic"><img className="avicon" src="goblin1.png"></img></button>
+          <button className="avatarpic"><img className="avicon"src="fairy1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="wizard1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="witch1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="ogre1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="troll1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="assassin1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="archer1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="elf1.png"></img></button>
+          <button className="avatarpic"><img className="avicon" src="knight1.png"></img></button>
+        </div>
+
         <img src={avatar + ".png"} className="avatarimage"></img>
         <button
           onClick={() => {
@@ -89,5 +103,7 @@ function UserInfo() {
     </div>
   );
 }
+
+
 
 export default UserInfo;

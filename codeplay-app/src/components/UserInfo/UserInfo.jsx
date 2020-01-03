@@ -7,26 +7,25 @@ import axios from "axios";
 
 function UserInfo() {
   const dispatch = useDispatch();
-  const [profile, setProfile] = useState({
-    username: "Zehao",
-    password: "123123",
-    date: "23/09/2019",
-    progress: "20",
-    avatar: "goblin.png"
-  });
-
-  /**
-   *  Simple HTML structures  - Apply CSS after.
-   */
-
+  const username = "xhao98";
+  const password = "123123";
+  const date = "2013/01/01";
+  const [avatar, setAvatar] = useState("witch");
+  const progress = 22;
   //TODO: ADD URL AND ACTION TO RESPOSNE
   const saveRequest = () => {
-    // axios
-    //   .get()
-    //   .then()
-    //   .catch();
+    axios
+      .post("/save")
+      .then(res => {})
+      .catch(res => {
+        alert("Loading Failure");
+      });
 
     dispatch(changeAvatar("GOBLIN"));
+  };
+
+  const changeAvatar = newAvatar => {
+    setAvatar(newAvatar);
   };
 
   return (
@@ -45,12 +44,22 @@ function UserInfo() {
           <button className="avatarpic"><img className="avicon" src="elf1.png"></img></button>
           <button className="avatarpic"><img className="avicon" src="knight1.png"></img></button>
         </div>
+
+        <img src={avatar + ".png"} className="avatarimage"></img>
+        <button
+          onClick={() => {
+            changeAvatar("troll");
+          }}
+          className="changeavatar"
+        >
+          Change Avatar
+        </button>
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
           <h2 className="label">Username</h2>
           <h2 className="info" align="left">
-            {profile.username}
+            {username}
           </h2>
         </div>
         <div className="passwordinfoholder">
@@ -70,13 +79,13 @@ function UserInfo() {
         <div className="usernameinfoholder">
           <h2 className="label">Joined</h2>
           <h2 className="info" align="left">
-            {profile.date}
+            {date}
           </h2>
         </div>
         <div className="usernameinfoholder">
           <h2 className="label">Progress</h2>
           <h2 className="info" align="left">
-            {profile.progress + "%"}
+            {progress + "%"}
           </h2>
         </div>
         <div className="infobuttons">

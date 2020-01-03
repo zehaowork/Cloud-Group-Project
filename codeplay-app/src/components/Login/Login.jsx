@@ -22,14 +22,16 @@ function Login() {
 
       localStorage.setItem("loginStatus", "ON");
       localStorage.setItem("user", "xhao98");
-    }, 5000);
+    }, 2000);
 
-    // axios
-    //   .get("OUR_SEVER")
-    //   .then(res => {
-    //     alert(res);
-    //   })
-    //   .catch("");
+    axios
+      .get("/login")
+      .then(res => {
+        alert("Login Successful");
+      })
+      .catch(res => {
+        alert("Login Failed");
+      });
   };
   return (
     <div className="loginpage">

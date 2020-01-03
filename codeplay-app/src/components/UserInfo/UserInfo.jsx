@@ -4,14 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeView, changeAvatar } from "../../actions/index";
 import "./UserInfo.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function UserInfo() {
   const dispatch = useDispatch();
+
+  const history = useHistory()
+   
   const username = "xhao98";
   const password = "123123";
   const date = "2013/01/01";
   const [avatar, setAvatar] = useState("witch");
   const progress = 22;
+
 
   //TODO: ADD URL AND ACTION TO RESPOSNE
   const saveRequest = () => {
@@ -34,6 +39,7 @@ function UserInfo() {
     <div className="userinfopage">
       <audio autoPlay id="audio" src={avatar + ".wav"}></audio>
       <div className="avatarholder">
+
         <img src={avatar + ".png"} className="avatarimage"></img>
         <div className="avatars">
           <button
@@ -119,6 +125,7 @@ function UserInfo() {
             <img className="avicon" src="knight1.png"></img>
           </button>
         </div>
+
       </div>
       <div className="userinfoholder">
         <div className="usernameinfoholder">
@@ -156,7 +163,8 @@ function UserInfo() {
         <div className="infobuttons">
           <button
             onClick={() => {
-              dispatch(changeView("GAME_PAGE"));
+                history.push('/game')
+              // dispatch(changeView("GAME_PAGE"));
             }}
             className="infobutton"
           >

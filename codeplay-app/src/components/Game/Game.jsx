@@ -7,8 +7,12 @@ import "ace-builds/src-noconflict/theme-monokai";
 import "./Game.css";
 import axios from "axios";
 
+import { useHistory } from "react-router-dom";
+
+
 function Game() {
   const dispatch = useDispatch();
+  const history = useHistory()
 
   const [code, setCode] = useState("");
   const [unit, setUnit] = useState(2);
@@ -35,7 +39,8 @@ function Game() {
   const logoff = () => {
     localStorage.setItem("user", "");
     localStorage.setItem("loginStatus", "OFF");
-    dispatch(changeView("LOGIN_PAGE"));
+    history.push('/login')
+    // dispatch(changeView("LOGIN_PAGE"));
   };
 
   return (
@@ -100,7 +105,8 @@ function Game() {
 
         <button
           onClick={() => {
-            dispatch(changeView("USER_INFO_PAGE"));
+              history.push('/user')
+            // dispatch(changeView("USER_INFO_PAGE"));
           }}
           className="userinfo"
         >

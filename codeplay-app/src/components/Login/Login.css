@@ -1,9 +1,11 @@
 .loginpage {
+    height: 100%;
   background-color: #242a3b;
   display: grid;
 }
 
 .innerlogin {
+    text-align: center;
   display: grid;
   grid-template-rows: 200px 60px 60px 60px 60px;
   align-self: center;

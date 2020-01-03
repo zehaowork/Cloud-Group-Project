@@ -1,4 +1,5 @@
 .gamepage {
+    height: 100% !important;
   background-color: #242a3b;
   display: grid;
   grid-template-rows: 40px 230px 330px;

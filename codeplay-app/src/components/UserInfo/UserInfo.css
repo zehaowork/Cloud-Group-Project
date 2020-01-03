@@ -1,4 +1,5 @@
 .userinfopage {
+    height: 100%;
   background-color: #242a3b;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -10,7 +11,7 @@
 }
 
 .avatarimage {
-    height: 500px; 
+    height: 500px;
     width: 380px;
     align-self: center;
     justify-self: center;

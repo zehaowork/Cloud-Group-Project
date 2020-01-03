@@ -4,9 +4,12 @@ import { useDispatch } from "react-redux";
 import { changeView, login } from "../../actions";
 import axios from "axios";
 import { SemipolarLoading } from "react-loadingg";
+import { useHistory } from "react-router-dom";
 
 function Login() {
   const dispatch = useDispatch();
+  const history = useHistory()
+
   const [pass, setPass] = useState("");
   const [user, setUser] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,14 +18,15 @@ function Login() {
    */
   const loginRequest = () => {
     setLoading(true);
-    setTimeout(() => {
+    // setTimeout(() => {
       setLoading(false);
-      dispatch(changeView("GAME_PAGE"));
+      history.push('/game')
+      // dispatch(changeView("GAME_PAGE"));
       // alert("Your name is " + user + ", Your password is " + pass + ".");
 
       localStorage.setItem("loginStatus", "ON");
       localStorage.setItem("user", "xhao98");
-    }, 5000);
+    // }, 2000);
 
     // axios
     //   .get("OUR_SEVER")

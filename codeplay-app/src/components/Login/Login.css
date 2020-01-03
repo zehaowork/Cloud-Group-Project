@@ -79,3 +79,7 @@ h1 {
 .signup:active {
   background-color: black;
 }
+
+.status {
+  color: white;
+}

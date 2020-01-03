@@ -10,6 +10,7 @@ function Login() {
   const [pass, setPass] = useState("");
   const [user, setUser] = useState("");
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("Login Failed");
   /**
    * TODO: Add actual URL for login
    */
@@ -79,6 +80,7 @@ function Login() {
               Sign up?
             </button>
           </div>
+          <h2 className="status">{status}</h2>
         </div>
       )}
     </div>

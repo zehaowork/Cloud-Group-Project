@@ -37,7 +37,7 @@ function Home() {
 
   return (
     <div className="home">
-        <div class="centered-p">
+        <div className="centered-p">
             <h2>Welcome apprentice,</h2>
             <br/>
             <p className="storytext" align="justify">
@@ -62,7 +62,7 @@ function Home() {
               Yes, Crimbi was a fool alright.
             </p>
         </div>
-        <div class='loginbuttons'>
+        <div className='loginbuttons'>
             <button
               onClick={() => {
                 login();

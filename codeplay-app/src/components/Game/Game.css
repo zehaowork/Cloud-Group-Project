@@ -37,14 +37,14 @@
 
 .chapters {
   grid-row: 1 / span all;
-  overflow: scroll;
-  height: 600px;
+  overflow-y: scroll;
+  height: 99%;
   padding-top: 5px;
   padding-left: 5px;
 }
 
 .story {
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 15px;
   border: 1px solid #1696c4;
   border-radius: 10px;
@@ -65,7 +65,7 @@
 }
 
 .instructions {
-  overflow: scroll;
+  overflow-y: scroll;
   color: #1696c4;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
@@ -126,7 +126,7 @@
   color: green;
   text-align: left;
   padding: 5px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .chapterholder {

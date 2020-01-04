@@ -8,9 +8,8 @@ import { useHistory } from "react-router-dom";
 
 function UserInfo() {
   const dispatch = useDispatch();
-
   const history = useHistory()
-   
+
   const username = "xhao98";
   const password = "123123";
   const date = "2013/01/01";
@@ -141,7 +140,7 @@ function UserInfo() {
           </h2>
           <button
             onClick={() => {
-              dispatch(changeView("RESET_PAGE"));
+                history.push("/reset");
             }}
             className="changepassword"
           >

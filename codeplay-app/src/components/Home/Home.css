@@ -1,0 +1,22 @@
+.home {
+    height: 100%;
+    background-color: #242a3b;
+    display: grid;
+}
+
+.centered-p {
+    width: 40em;
+    margin: 0 auto;
+    align-self: center;
+}
+
+div h2 {
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+
+.inline-buttons {
+    display: inline;
+    margin: 0 auto;
+}

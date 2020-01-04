@@ -76,10 +76,10 @@ function Login() {
             <button
               className="signup"
               onClick={() => {
-                dispatch(changeView("SIGNUP_PAGE"));
+                history.push("/singup");
               }}
             >
-              Sign up?
+              Sign up
             </button>
           </div>
           <h2 className="status">{status}</h2>

@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { useDispatch, useSelector } from "react-redux";
-import { changeView, changeAvatar } from "../../actions/index";
+// import { useDispatch } from "react-redux";
+// import { changeAvatar } from "../../actions/index";
 import "./UserInfo.css";
-import axios from "axios";
+// import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 function UserInfo() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const history = useHistory()
 
   const username = "xhao98";
-  const password = "123123";
+  // const password = "123123";
   const date = "2013/01/01";
   const [avatar, setAvatar] = useState("witch");
   const progress = 22;
 
 
   //TODO: ADD URL AND ACTION TO RESPOSNE
-  const saveRequest = () => {
-    axios
-      .post("/save")
-      .then(res => {})
-      .catch(res => {
-        alert("Loading Failure");
-      });
-
-    dispatch(changeAvatar("GOBLIN"));
-  };
+  // const saveRequest = () => {
+  //   axios
+  //     .post("/save")
+  //     .then(res => {})
+  //     .catch(res => {
+  //       alert("Loading Failure");
+  //     });
+  //
+  //   dispatch(changeAvatar("GOBLIN"));
+  // };
 
   const playSound = () => {
     var sound = document.getElementById("audio");

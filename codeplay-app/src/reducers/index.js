@@ -4,7 +4,6 @@ import loginStatusReducer from "./loginStatus";
 import userReducer from "./user";
 
 import { combineReducers } from "redux";
-import { login } from "../actions";
 
 const allReducers = combineReducers({
   viewController: viewControllerReducer,

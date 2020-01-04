@@ -23,7 +23,7 @@ function App() {
     if (loginStatus === "ON") {
       history.push("/game");
     }
-  });
+  }, []);
 
   //ADD OTHER ROUTES HERE
   return (
